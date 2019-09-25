@@ -5,23 +5,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crear Contacto</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>Listar Contactos</h1>
-        <form action="ListarContactosVista.php" method="GET">
-            <div class="form-group">
+        <h2 class="mb-4 mt-4">Listar Contactos</h2>
+        <form class="row mb-4" action="ListarContactosVista.php" method="GET">
+            <div class="col-10">
                 <input type="text" class="form-control" id="param" name="param" aria-describedby="emailHelp"
                     placeholder="Busqueda..." value ="<?php echo isset($_GET['param'])? $_GET['param'] : '' ?>">
-                    <input type="submit" value="Buscar" class="btn btn-primary">
             </div>
-            
+
+            <input type="submit" value="Buscar" class="btn btn-primary col-2">
         </form>
+
         <table class="table">
             <thead>
                 <th>Nombre</th>

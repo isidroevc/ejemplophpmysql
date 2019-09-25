@@ -5,21 +5,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crear Contacto</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>Crear contacto</h1>
+        <h2>Crear contacto</h2><br>
         <form action="../controladores/CrearContactoControlador.php" method="POST">
             <div class="form-group">
                 <label for="nombre">Nombre</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp"
                     placeholder="Escribe el nombre del contacto">
-                <small id="emailHelp" class="form-text text-muted">Escribe el nombre del contacto</small>
             </div>
             <div class="form-group">
                 <label for="apellidos">Apellidos</label>
