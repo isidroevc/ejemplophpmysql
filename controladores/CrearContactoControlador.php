@@ -37,7 +37,8 @@ if (count($errores) > 0) {
 }
 try {
     $conexion = Conexion::obtenerConexion();
-    $query = "INSERT INTO contactos (nombre, apellidos, email, telefono_fijo, telefono_celular) VALUES(:nombre, :apellidos, :email, :telefono_fijo, :telefono_celular)";
+    $query = "INSERT INTO contactos (nombre, apellidos, email, telefono_fijo, telefono_celular) 
+    VALUES(:nombre, :apellidos, :email, :telefono_fijo, :telefono_celular)";
 
     $statement = $conexion->prepare($query);
     if ($statement->execute($datosContacto))

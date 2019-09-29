@@ -40,13 +40,15 @@ if (count($errores) > 0) {
 }
 try {
     $conexion = Conexion::obtenerConexion();
-    $query = "UPDATE contactos set nombre = :nombre, apellidos = :apellidos, email = :email, telefono_fijo = :telefono_fijo, telefono_celular = :telefono_celular WHERE id = :id";
-
+    $query = "UPDATE contactos set nombre = :nombre, apellidos = :apellidos,
+     email = :email, telefono_fijo = :telefono_fijo, 
+     telefono_celular = :telefono_celular WHERE id = :id";
     $statement = $conexion->prepare($query);
     if ($statement->execute($datosContacto))
         header('Location: '.ROOT_URL.'/vistas/ListarContactosVista.php');
     else {
-        header('Location: '.ROOT_URL.'/vistas/ErrorVista.php?err=Error la no se pudo realizar la insercion');
+        header('Location: '.ROOT_URL.'/vistas/ErrorVista.php?err=
+        Error la no se pudo realizar la insercion');
     }
 } catch(\Exception $ex) {
     header('Location: '.ROOT_URL.'/vistas/ErrorVista.php?err='.$ex->getMessage());

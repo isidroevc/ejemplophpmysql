@@ -24,7 +24,8 @@ try {
     if ($statement->execute($datosContacto))
         header('Location: '.ROOT_URL.'/vistas/ContactoEliminadoVista.php');
     else {
-        header('Location: '.ROOT_URL.'/vistas/ErrorVista.php?err=Error la no se pudo realizar la insercion');
+        header('Location: '.ROOT_URL.'/vistas/ErrorVista.php?err=
+        Error la no se pudo realizar la eliminacion');
     }
 } catch(\Exception $ex) {
     header('Location: '.ROOT_URL.'/vistas/ErrorVista.php?err='.$ex->getMessage());

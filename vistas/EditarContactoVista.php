@@ -28,11 +28,11 @@
         $row = $statement->fetch();
         
         if (!$row) {
-            header('Location: '.ROOT_URL.'/vistas/ErrorVista.php?err=El usuario no exist22');
+            header('Location: '.ROOT_URL.'/vistas/ErrorVista.php?err=El usuario no existe');
             die();
         }
         ?>
-        <h1>Crear contacto</h1>
+        <h1>Editar contacto</h1>
         <form action="../controladores/EditarContactoControlador.php" method="POST">
             <div class="form-group">
                 <label for="nombre">Nombre</label>

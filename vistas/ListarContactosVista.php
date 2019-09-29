@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crear Contacto</title>
+    <title>Listar Contactos</title>
 </head>
 
 <body>
@@ -42,7 +42,9 @@
                     $query = "SELECT * FROM contactos";
 
                     if($param) {
-                        $query .= " WHERE nombre LIKE :param or apellidos LIKE :param or telefono_fijo LIKE :param or telefono_celular LIKE :param or email LIKE :param";
+                        $query .= " WHERE nombre LIKE :param or apellidos 
+                        LIKE :param or telefono_fijo LIKE :param or 
+                        telefono_celular LIKE :param or email LIKE :param";
                     }
                     $statement = $conexion->prepare($query);
                     if($param)
@@ -57,8 +59,10 @@
                             "<td>" . $row['email'] . "</td>" .
                             "<td>" . $row['telefono_fijo'] . "</td>" .
                             "<td>" . $row['telefono_celular'] . "</td>" .
-                            "<td> <a href=\"EditarContactoVista.php?id=".$row['id']."\"> <button class=\"btn btn-primary\">Editar</button><a/></td>".
-                            "<td> <a href=\"EliminarContactoVista.php?id=".$row['id']."\"> <button class=\"btn btn-danger\">Eliminar</button><a/></td>".
+                            "<td> <a href=\"EditarContactoVista.php?id=".$row['id']."\"> 
+                            <button class=\"btn btn-primary\">Editar</button><a/></td>".
+                            "<td> <a href=\"EliminarContactoVista.php?id=".$row['id']."\">
+                             <button class=\"btn btn-danger\">Eliminar</button><a/></td>".
                             "</tr>";
                     }
                         
